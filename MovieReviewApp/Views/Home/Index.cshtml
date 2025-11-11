@@ -1,0 +1,17 @@
+@model IEnumerable<MovieReviewApp.Models.Review>
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>MovieReviewApp</title>
+</head>
+<body>
+  <h1>Reseñas de películas</h1>
+  <ul>
+  @foreach(var r in Model) {
+    <li>@r.MovieTitle - @r.Rating ⭐ - @r.Comment</li>
+  }
+  </ul>
+</body>
+</html>
